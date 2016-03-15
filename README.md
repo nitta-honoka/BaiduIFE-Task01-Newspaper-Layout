@@ -1,5 +1,5 @@
 # BaiduIFE-Task01-Newspaper-Layout
-百度前端学院 2016 年春季班 task01 —— 使用原生 HTML 及 CSS 模仿报纸排版
+百度前端学院 2016 年春季班 task01 —— 使用原生 HTML 及 CSS 模仿报纸排版
 
 #任务目标
 
