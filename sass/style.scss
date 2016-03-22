@@ -1,0 +1,70 @@
+@import "reset";
+
+$fontYa: "Microsoft YaHei";
+$fontHei: "Heiti SC";
+$top-bot-border: 2px solid #8B8785;
+$top-bot-padding: 30px;
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.margin-center {
+  margin: 0 auto;
+}
+.shade {
+  @extend .absolute;
+  width: 191px;
+  height: 301px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 980px;
+  max-height: 1386px;
+}
+header {
+  @extend .relative;
+  left: 44px;
+  width: 110px;
+  height: 61px;
+  font-size: 12px;
+  font-family: $fontHei;
+  color: #ffffff;
+  background-color: #CD5054;
+  .ife-intro {
+    @extend .absolute;
+    bottom: 0;
+    margin-left: 15px;
+  }
+}
+.main-container {
+  @extend .margin-center;
+  width: 892px;
+  border-top: $top-bot-border;
+  border-bottom: $top-bot-border;
+  padding-top: $top-bot-padding;
+  padding-bottom: $top-bot-padding;
+}
+.banner {
+    .banner-img {
+      @extend .relative;
+      width: 641px;
+      height: 301px;
+      background: url("../img/PC.jpg");
+      background-size: contain;
+      .left-shade {
+        @extend .shade;
+        left: 0;
+        background-color: rgba(66,140,89,0.5);
+      }
+      .right-shade {
+        @extend .shade;
+        right: 0;
+        background-color: rgba(204,118,128,0.5);
+      }
+    }
+}
+
