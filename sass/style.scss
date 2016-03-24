@@ -2,13 +2,6 @@
 
 $top-bot-border: 2px solid #8B8785;
 $top-bot-padding: 30px;
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
 
 .margin-center {
   margin: 0 auto;
@@ -25,24 +18,33 @@ $top-bot-padding: 30px;
 .font-kai {
   font-family: "Kaiti SC";
 }
+@mixin clearfix {
+  &::after {
+    display: block;
+    height: 0;
+    content: ".";
+    clear: both;
+    visibility: hidden;
+  }
+  & {
+    zoom: 1;
+  }
+}
+@mixin position($position) {
+  position: $position;
+}
+@mixin article-title($color) {
+  @extend .font-ya;
+  font-size: 16px;
+  font-weight: 800;
+  color: $color;
+  text-decoration: underline;
+}
 .shade {
-  @extend .absolute;
+  @include position(absolute);
   width: 191px;
   height: 301px;
 }
-
-.clearfix::after {
-  display: block;
-  height: 0;
-  content: ".";
-  clear: both;
-  visibility: hidden;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -53,7 +55,7 @@ body {
 }
 
 header {
-  @extend .relative;
+  @include position(relative);
   @extend .font-ya;
   left: 44px;
   width: 110px;
@@ -62,7 +64,7 @@ header {
   color: #ffffff;
   background-color: #CD5054;
   .ife-intro {
-    @extend .absolute;
+    @include position(absolute);
     bottom: 0;
     margin-left: 15px;
   }
@@ -78,13 +80,13 @@ header {
 }
 
 .banner {
-  @extend .clearfix;
+  @include clearfix;
   .banner-img {
-    @extend .relative;
+    @include position(relative);
     float: left;
     width: 641px;
     height: 301px;
-    background: url("../img/PC.jpg");
+    background: url("../img/snowhalation.jpg");
     background-size: contain;
     .left-shade {
       @extend .shade;
@@ -101,7 +103,7 @@ header {
     float: right;
     width: 203px;
     border-top: $top-bot-border;
-    color: #000000;
+    color: #DE0077;
     .intro-title {
       @extend .font-ya;
       line-height: 40px;
@@ -109,13 +111,49 @@ header {
       text-decoration: underline;
       text-transform: capitalize;
       font-variant: small-caps;
-      color: #DE0077;
     }
     .intro-subtitle {
       @extend .font-kai;
       line-height: 10px;
       font-size: 12px;
-      color: #DE0077;
+    }
+    .intro-04 {
+      margin-top: 20px;
+      font-size: 116px;
+      font-style: italic;
+    }
+    .intro-05 {
+      margin-top: 20px;
+      color: #cc8091;
+      font-size: 55px;
+      .intro-05-01 {
+        @include position(relative);
+        font-size: 21px;
+        bottom: 15px;
+      }
+      .intro-05-02 {
+        @include position(relative);
+        font-size: 12px;
+        bottom: 0;
+        right: 18px;
+      }
+    }
+  }
+}
+.article-info {
+  .article-what {
+    .title {
+      @include article-title(#418c59);
+    }
+  }
+  .article-when {
+    .title {
+      @include article-title(#d2994f);
+    }
+  }
+  .article-how {
+    .title {
+      @include article-title(#cc7680);
     }
   }
 }
