@@ -141,6 +141,7 @@ header {
   }
 }
 .article-info {
+  width: 641px;
   .article-what {
     .title {
       @include article-title(#418c59);

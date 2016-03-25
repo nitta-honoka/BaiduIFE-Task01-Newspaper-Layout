@@ -141,20 +141,22 @@ header {
       bottom: 0;
       right: 18px; }
 
-.article-info .article-what .title {
-  font-size: 16px;
-  font-weight: 800;
-  color: #418c59;
-  text-decoration: underline; }
-.article-info .article-when .title {
-  font-size: 16px;
-  font-weight: 800;
-  color: #d2994f;
-  text-decoration: underline; }
-.article-info .article-how .title {
-  font-size: 16px;
-  font-weight: 800;
-  color: #cc7680;
-  text-decoration: underline; }
+.article-info {
+  width: 641px; }
+  .article-info .article-what .title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #418c59;
+    text-decoration: underline; }
+  .article-info .article-when .title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #d2994f;
+    text-decoration: underline; }
+  .article-info .article-how .title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #cc7680;
+    text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
