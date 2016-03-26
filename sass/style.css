@@ -47,10 +47,10 @@ table {
 .font-hei {
   font-family: "Heiti SC"; }
 
-.font-ya, header, .banner .banner-intro .intro-title, .article-info .article-what .title, .article-info .article-when .title, .article-info .article-how .title {
+.font-ya, header, .banner .banner-intro .intro-title, .panel-info .panel .title-what, .panel-info .panel .title-when, .panel-info .panel .title-how, .panel-info .panel .panel-list li, .panel-info .panel .panel-list li span {
   font-family: "Microsoft YaHei"; }
 
-.font-song {
+.font-song, .panel-info .panel article {
   font-family: "Songti SC"; }
 
 .font-kai, .banner .banner-intro .intro-subtitle {
@@ -141,22 +141,51 @@ header {
       bottom: 0;
       right: 18px; }
 
-.article-info {
-  width: 641px; }
-  .article-info .article-what .title {
-    font-size: 16px;
-    font-weight: 800;
-    color: #418c59;
-    text-decoration: underline; }
-  .article-info .article-when .title {
-    font-size: 16px;
-    font-weight: 800;
-    color: #d2994f;
-    text-decoration: underline; }
-  .article-info .article-how .title {
-    font-size: 16px;
-    font-weight: 800;
-    color: #cc7680;
-    text-decoration: underline; }
+.panel-info {
+  width: 641px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  margin-top: 20px; }
+  .panel-info .panel {
+    position: relative;
+    width: 33%; }
+    .panel-info .panel .title-what {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #418c59;
+      text-decoration: underline; }
+    .panel-info .panel .title-when {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #d2994f;
+      text-decoration: underline; }
+    .panel-info .panel .title-how {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #cc7680;
+      text-decoration: underline; }
+    .panel-info .panel article {
+      line-height: 16px;
+      font-size: 12px;
+      color: #767777; }
+    .panel-info .panel .panel-list {
+      position: absolute;
+      bottom: 0; }
+      .panel-info .panel .panel-list li {
+        font-size: 12px;
+        line-height: 16px;
+        color: #231815;
+        opacity: 0.7; }
+        .panel-info .panel .panel-list li span {
+          font-style: italic;
+          font-size: 12px;
+          color: #cd4a48; }
 
 /*# sourceMappingURL=style.css.map */
