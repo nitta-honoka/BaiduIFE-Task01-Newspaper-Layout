@@ -44,17 +44,27 @@ table {
 .margin-center, .main-container {
   margin: 0 auto; }
 
-.font-hei {
+.font-hei, .article .article-left .title-01, .article .article-left .title-02 {
   font-family: "Heiti SC"; }
 
-.font-ya, header, .banner .banner-intro .intro-title, .panel-info .panel .title-what, .panel-info .panel .title-when, .panel-info .panel .title-how, .panel-info .panel .panel-list li, .panel-info .panel .panel-list li span {
+.font-ya, header, .banner .banner-intro .intro-title, .panel-info .panel .title-what, .panel-info .panel .title-when, .panel-info .panel .title-how, .panel-info .panel .panel-list li, .panel-info .panel .panel-list li span, .article .article-left .article-info strong {
   font-family: "Microsoft YaHei"; }
 
-.font-song, .panel-info .panel article {
+.font-song, .panel-info .panel article, .article .article-left .article-info p {
   font-family: "Songti SC"; }
 
 .font-kai, .banner .banner-intro .intro-subtitle {
   font-family: "Kaiti SC"; }
+
+.clearfix::after {
+  display: block;
+  height: 0;
+  content: ".";
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
 
 .shade, .banner .banner-img .left-shade, .banner .banner-img .right-shade {
   position: absolute;
@@ -88,14 +98,6 @@ header {
   padding-top: 30px;
   padding-bottom: 30px; }
 
-.banner::after {
-  display: block;
-  height: 0;
-  content: ".";
-  clear: both;
-  visibility: hidden; }
-.banner {
-  zoom: 1; }
 .banner .banner-img {
   position: relative;
   float: left;
@@ -187,5 +189,41 @@ header {
           font-style: italic;
           font-size: 12px;
           color: #cd4a48; }
+
+.article {
+  width: 100%;
+  margin-top: 40px; }
+  .article .article-left {
+    float: left;
+    width: 415px; }
+    .article .article-left .title-01 {
+      font-size: 42px;
+      color: #11456b;
+      font-weight: 900; }
+      .article .article-left .title-01 i {
+        font-size: 72px;
+        color: #f5e327; }
+    .article .article-left .title-02 {
+      font-size: 33px;
+      color: #11456b;
+      font-weight: 900;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #113C63; }
+    .article .article-left .article-info {
+      margin-top: 10px; }
+      .article .article-left .article-info strong {
+        float: left;
+        padding: 10px;
+        font-size: 70px;
+        color: #f5e327; }
+      .article .article-left .article-info p {
+        font-size: 12px;
+        line-height: 16px;
+        color: #767777; }
+      .article .article-left .article-info img {
+        float: right;
+        width: 250px;
+        height: 293px;
+        padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */

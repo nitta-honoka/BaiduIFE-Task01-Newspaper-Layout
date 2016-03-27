@@ -18,18 +18,16 @@ $top-bot-padding: 30px;
 .font-kai {
   font-family: "Kaiti SC";
 }
-@mixin clearfix {
-  &::after {
+.clearfix::after {
     display: block;
     height: 0;
     content: ".";
     clear: both;
     visibility: hidden;
   }
-  & {
+.clearfix {
     zoom: 1;
   }
-}
 @mixin position($position) {
   position: $position;
 }
@@ -41,6 +39,12 @@ $top-bot-padding: 30px;
   font-weight: 800;
   color: $color;
   text-decoration: underline;
+}
+@mixin title($size, $color) {
+  @extend .font-hei;
+  font-size: $size;
+  color: $color;
+  font-weight: 900;
 }
 .shade {
   @include position(absolute);
@@ -82,7 +86,6 @@ header {
 }
 
 .banner {
-  @include clearfix;
   .banner-img {
     @include position(relative);
     float: left;
@@ -186,4 +189,47 @@ header {
     }
   }
 }
+.article {
+  width: 100%;
+  margin-top: 40px;
+  .article-left {
+    float: left;
+    width: 415px;
+    .title-01 {
+      @include title(42px, #11456b);
+      i {
+        font-size: 72px;
+        color: #f5e327;
+      }
+    }
+    .title-02 {
+      @include title(33px, #11456b);
+      padding-bottom: 10px;
+      border-bottom: 2px solid #113C63;
+    }
+    .article-info {
+      margin-top: 10px;
+      strong {
+        @extend .font-ya;
+        float: left;
+        padding: 10px;
+        font-size: 70px;
+        color: #f5e327;
+      }
+      p {
+        @extend .font-song;
+        font-size: 12px;
+        line-height: 16px;
+        color: #767777;
+      }
+      img {
+        float: right;
+        width: 250px;
+        height: 293px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
 
