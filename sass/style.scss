@@ -63,7 +63,7 @@ body {
 header {
   @include position(relative);
   @extend .font-ya;
-  left: 44px;
+  margin-left: 44px;
   width: 110px;
   height: 61px;
   font-size: 12px;
@@ -230,6 +230,30 @@ header {
       }
     }
   }
+  .article-right {
+    @include position(relative);
+    float: right;
+    .article-img {
+      width: 458px;
+      height: 275px;
+      background: url("../img/lovelivesif.jpg");
+      background-size: contain;
+      .img-info {
+        @include position(absolute);
+        bottom: 0;
+        width: 458px;
+        height: 61px;
+        background-color: #6E675E;
+        opacity: .7;
+        span {
+          @extend .font-ya;
+          font-size: 26px;
+          color: #DE0077;
+        }
+      }
+    }
+  }
 }
+
 
 
