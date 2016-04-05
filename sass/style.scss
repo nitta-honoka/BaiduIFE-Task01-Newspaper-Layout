@@ -46,6 +46,18 @@ $top-bot-padding: 30px;
   color: $color;
   font-weight: 900;
 }
+@mixin extra-li($size, $color, $alignment, $lineHeight) {
+  @extend .font-song;
+  font-size: $size;
+  color: $color;
+  text-align: $alignment;
+  line-height: $lineHeight;
+}
+.absolute-center {
+  @include position(absolute);
+  top: 50%;
+  transform: translateY(-50%);
+}
 .shade {
   @include position(absolute);
   width: 191px;
@@ -231,9 +243,9 @@ header {
     }
   }
   .article-right {
-    @include position(relative);
     float: right;
     .article-img {
+      @include position(relative);
       width: 458px;
       height: 275px;
       background: url("../img/lovelivesif.jpg");
@@ -245,11 +257,69 @@ header {
         height: 61px;
         background-color: #6E675E;
         opacity: .7;
-        span {
-          @extend .font-ya;
-          font-size: 26px;
-          color: #DE0077;
+        div {
+          @extend .absolute-center;
+          height: 44px;
+          margin-left: 30px;
+          padding-left: 5px;
+          border-left: 3px solid #72b16a;
+          span {
+            @extend .font-ya;
+            font-size: 26px;
+            color: #ffffff;
+          }
+          i {
+            @extend .font-ya;
+            line-height: 140%;
+            font-size: 12px;
+            color: #72b16a;
+          }
         }
+
+      }
+    }
+    .article-extra {
+      @include position(relative);
+      width: 459px;
+      height: 498px;
+      margin-top: 20px;
+      background-color: #E6E5CD;
+      ul {
+        display: block;
+        padding: 30px;
+        li {
+          @include extra-li(16px, #5a5b5b, left, 30px);
+          span {
+            @include extra-li(12px, #5a5b5b, right, 30px);
+          }
+        }
+      }
+      .left {
+        @include position(absolute);
+        bottom: 0;
+        left: 0;
+        padding: 30px;
+        background-color: #f41c29;
+        .left-info {
+          span {
+            @extend .font-ya;
+            display: inline-block;
+            padding-right: 5px;
+            border-right: 2px solid #ffffff;
+            font-size: 110px;
+            color: #ffffff;
+          }
+          div {
+            display: inline-block;
+            padding-left: 5px;
+          }
+        }
+      }
+      .right {
+        @include position(absolute);
+        bottom: 0;
+        right: 0;
+        width: 260px;
       }
     }
   }
