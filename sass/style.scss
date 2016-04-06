@@ -380,5 +380,19 @@ header {
   }
 }
 
+footer {
+  @extend .font-hei;
+  @include position(relative);
+  width: 892px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  font-size: 12px;
+  color: #d45d5c;
+  span {
+    @include position(absolute);
+    right: 0;
+  }
+}
+
 
 
