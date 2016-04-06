@@ -6,31 +6,39 @@ $top-bot-padding: 30px;
 .margin-center {
   margin: 0 auto;
 }
+
 .font-hei {
   font-family: "Heiti SC";
 }
+
 .font-ya {
   font-family: "Microsoft YaHei";
 }
+
 .font-song {
   font-family: "Songti SC";
 }
+
 .font-kai {
   font-family: "Kaiti SC";
 }
+
 .clearfix::after {
-    display: block;
-    height: 0;
-    content: ".";
-    clear: both;
-    visibility: hidden;
-  }
+  display: block;
+  height: 0;
+  content: ".";
+  clear: both;
+  visibility: hidden;
+}
+
 .clearfix {
-    zoom: 1;
-  }
+  zoom: 1;
+}
+
 @mixin position($position) {
   position: $position;
 }
+
 @mixin article-title($color) {
   @extend .font-ya;
   display: block;
@@ -40,12 +48,14 @@ $top-bot-padding: 30px;
   color: $color;
   text-decoration: underline;
 }
+
 @mixin title($size, $color) {
   @extend .font-hei;
   font-size: $size;
   color: $color;
   font-weight: 900;
 }
+
 @mixin extra-li($size, $color, $alignment, $lineHeight) {
   @extend .font-song;
   font-size: $size;
@@ -53,16 +63,19 @@ $top-bot-padding: 30px;
   text-align: $alignment;
   line-height: $lineHeight;
 }
+
 .absolute-center {
   @include position(absolute);
   top: 50%;
   transform: translateY(-50%);
 }
+
 .shade {
   @include position(absolute);
   width: 191px;
   height: 301px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -157,6 +170,7 @@ header {
     }
   }
 }
+
 .panel-info {
   width: 641px;
   display: flex;
@@ -201,6 +215,7 @@ header {
     }
   }
 }
+
 .article {
   width: 100%;
   margin-top: 40px;
@@ -289,6 +304,15 @@ header {
         padding: 30px;
         li {
           @include extra-li(16px, #5a5b5b, left, 30px);
+          .triangle {
+            @include position(relative);
+            right: 5px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom: 5px solid #7e91ac;
+          }
           span {
             @include extra-li(12px, #5a5b5b, right, 30px);
           }
@@ -335,6 +359,7 @@ header {
         right: 0;
         width: 175px;
         font-size: 14px;
+        padding-bottom: 35px;
         line-height: 16px;
         text-indent: 3em;
         span {
@@ -342,8 +367,13 @@ header {
           font-size: 72px;
           color: #d45d5c;
         }
-        span:nth-child(1) {
-
+        .quote-left {
+          @include position(absolute);
+          left: -35px;
+        }
+       .quote-right {
+          @include position(absolute);
+          right: 20px;
         }
       }
     }

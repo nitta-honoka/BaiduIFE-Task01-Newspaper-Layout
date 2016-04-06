@@ -271,6 +271,14 @@ header {
           color: #5a5b5b;
           text-align: left;
           line-height: 30px; }
+          .article .article-right .article-extra ul li .triangle {
+            position: relative;
+            right: 5px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom: 5px solid #7e91ac; }
           .article .article-right .article-extra ul li span {
             font-size: 12px;
             color: #5a5b5b;
@@ -306,11 +314,18 @@ header {
         right: 0;
         width: 175px;
         font-size: 14px;
+        padding-bottom: 35px;
         line-height: 16px;
         text-indent: 3em; }
         .article .article-right .article-extra .right span {
           display: inline-block;
           font-size: 72px;
           color: #d45d5c; }
+        .article .article-right .article-extra .right .quote-left {
+          position: absolute;
+          left: -35px; }
+        .article .article-right .article-extra .right .quote-right {
+          position: absolute;
+          right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
