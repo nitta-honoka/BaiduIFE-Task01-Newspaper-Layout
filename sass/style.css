@@ -44,7 +44,7 @@ table {
 .margin-center, .main-container {
   margin: 0 auto; }
 
-.font-hei, .article .article-left .title-01, .article .article-left .title-02, .article .article-right .article-extra .left .left-info div i, .article .article-right .article-extra .left .left-info div p, .article .article-right .article-extra .right {
+.font-hei, .article .article-left .title-01, .article .article-left .title-02, .article .article-right .article-extra .left .left-info div i, .article .article-right .article-extra .left .left-info div p, .article .article-right .article-extra .right, footer {
   font-family: "Heiti SC"; }
 
 .font-ya, header, .banner .banner-intro .intro-title, .panel-info .panel .title-what, .panel-info .panel .title-when, .panel-info .panel .title-how, .panel-info .panel .panel-list li, .panel-info .panel .panel-list li span, .article .article-left .article-info strong, .article .article-right .article-img .img-info div span, .article .article-right .article-img .img-info div i, .article .article-right .article-extra .left .left-info span {
@@ -327,5 +327,16 @@ header {
         .article .article-right .article-extra .right .quote-right {
           position: absolute;
           right: 20px; }
+
+footer {
+  position: relative;
+  width: 892px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  font-size: 12px;
+  color: #d45d5c; }
+  footer span {
+    position: absolute;
+    right: 0; }
 
 /*# sourceMappingURL=style.css.map */
