@@ -24,7 +24,7 @@
 
 - 完成时间：2016.4.7
 - 学习了：报纸版布局,各类文字的排列与布局方式,字体及文字大小选择
-- 实现了：一个模仿报纸的布局网页
+- 实现了：一个模仿报纸的布局网页设计
 - DEMO：[地址](http://nitta-honoka.github.io/BaiduIFE-Task01-Newspaper-Layout/)
 
 #联系我
